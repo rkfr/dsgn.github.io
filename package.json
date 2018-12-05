@@ -1,0 +1,26 @@
+{
+  "name": "dsgn",
+  "version": "1.0.0",
+  "description": "responsive layout based on css grid + scss",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkfr/dsgn.github.io.git"
+  },
+  "author": "Roman Koliada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rkfr/dsgn.github.io/issues"
+  },
+  "homepage": "https://github.com/rkfr/dsgn.github.io#readme"
+}

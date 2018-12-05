@@ -1,0 +1,15 @@
+$color-beige: #E9EAE2;
+$robotoCR: 'RobotoCondensed-Regular-grid';
+
+%inclined_line {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0%;
+	bottom: 0%;
+	width: 145%;
+	height: 0;
+	transform-origin: 0 0;
+	transform: rotate(-45deg);
+	border-top: 1px solid #fff;
+}

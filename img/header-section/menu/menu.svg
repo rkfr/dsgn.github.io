@@ -1,0 +1,47 @@
+<!-- ставим как object -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 126" class="canvas" >
+
+	<style>
+		.square,
+		.line-top,
+		.line-bottom {
+			transition: 1s;
+		}
+
+		.line-middle {
+			transition: transform 1.2s ease-out;
+		}
+		
+		.square {
+			transition: stroke 1s;
+		}
+
+		.canvas:hover .square {
+			stroke: #f8c255;
+			fill: #f8c255;
+		}
+		
+		.canvas:hover .line-top {
+			transform: translateY(3%) rotate(45deg);
+			transform-origin: 45% 45%;
+		}
+
+		.canvas:hover .line-middle {
+			transition: 0.4s;
+			transform: translateX(-100%);
+			stroke: #f8c255;
+		}
+
+		.canvas:hover .line-bottom {
+			transform: translateY(-4%) rotate(-45deg);
+			transform-origin: 50% 50%;
+		}
+
+	</style>
+
+	<polyline points="4,4 118,4 118,116 4,116 4,4" fill="none" stroke="#fff" stroke-width="3" class="square" />
+	<line x1="40" y1="50" x2="80" y2="50" stroke="#fff" stroke-width="3"  class="line line-top" />
+	<line x1="40" y1="58" x2="80" y2="58" stroke="#fff" stroke-width="3"  class="line line-middle" />
+	<line x1="40" y1="66" x2="80" y2="66" stroke="#fff" stroke-width="3"  class="line line-bottom" />
+</svg>
