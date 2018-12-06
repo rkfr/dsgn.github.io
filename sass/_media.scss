@@ -1,0 +1,36 @@
+@import 'fonts';
+@import 'vars';
+
+@media screen and(max-width: 730px) {
+	
+	.header-section__content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.logo {
+		grid-column: 1;
+		position: relative;
+		left: 7%;
+	}
+
+	.chairs-img {
+		display: none;
+	}
+	.menu {
+		grid-column: 2;
+
+		&__contacts {
+			left: 42%;
+		}
+	}
+
+	.nav-menu {
+		max-width: 72px;
+		max-height: 72px;
+	}
+
+	%nav-menu__item {
+		top: 1.5%;
+	}
+
+}

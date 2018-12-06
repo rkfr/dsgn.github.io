@@ -1,15 +1,36 @@
 $color-beige: #E9EAE2;
 $robotoCR: 'RobotoCondensed-Regular-grid';
 
-%inclined_line {
-	content: '';
+%pos_absolute-block {
 	display: block;
 	position: absolute;
+}
+
+%inclined_line {
+	content: '';
+	@extend %pos_absolute-block;
 	left: 0%;
 	bottom: 0%;
-	width: 145%;
+	width: 142%;
 	height: 0;
 	transform-origin: 0 0;
 	transform: rotate(-45deg);
 	border-top: 1px solid #fff;
+}
+
+%nav-menu__item {
+	@extend %pos_absolute-block;
+	background: #f8c255;
+	color: #fff;
+	width: 90%;
+	height: 91%;
+	top: 2.4%;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	font-size: 14px;
+	padding-top: calc(55% - 14px);
 }
