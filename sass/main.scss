@@ -111,7 +111,7 @@
 	background: #7acec3;
 	grid-column: 6;
 
-	&__adress {
+	&__left-item {
 		@extend %pos_absolute-block;
 		color: #fff;
 		bottom: 34%;
@@ -125,7 +125,7 @@
 		font-size: 13px;
 	}
 
-	&__contacts {
+	&__right-item {
 		@extend %pos_absolute-block;
 		color: #fff;
 		left: 28%;
@@ -148,6 +148,7 @@
 
 .nav-menu {
 	@extend %pos_absolute-block;
+	cursor: pointer;
 	right: 31.5%;
 	top: 10%;
 	width: 100%;
@@ -166,6 +167,9 @@
 		left: -75%;
 		transform: translateX(90%);
 		transition: 1s;
+		&:hover {
+			background-color: darken(#f8c255, 12%);
+		}
 	}
 
 	&:hover &__item-1 {
@@ -179,6 +183,9 @@
 		left: -150%;
 		transform: translateX(180%);
 		transition: 1s;
+		&:hover {
+			background-color: darken(#f8c255, 12%);
+		}
 	}
 
 	&:hover &__item-2 {
@@ -192,6 +199,9 @@
 		left: -225%; //step 75
 		transform: translateX(270%); //step 90
 		transition: 1s;
+		&:hover {
+			background-color: darken(#f8c255, 12%);
+		}
 	}
 
 	&:hover &__item-3 {
@@ -205,6 +215,9 @@
 		left: -300%; //step 75
 		transform: translateX(360%); //step 90
 		transition: 1s;
+		&:hover {
+			background-color: darken(#f8c255, 12%);
+		}
 	}
 
 	&:hover &__item-4 {
@@ -218,6 +231,9 @@
 		left: -375%; //step 75
 		transform: translateX(450%); //step 90
 		transition: 1s;
+		&:hover {
+			background-color: darken(#f8c255, 12%);
+		}
 	}
 
 	&:hover &__item-5 {
@@ -226,5 +242,279 @@
 		visibility: visible;
 	}
 }
+
+// projects section
+
+.projects-section {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: minmax(230px, 300fr) 165fr 270fr 300fr 465fr;
+	grid-template-areas: 'project project fondue fondue potter'
+						 'project project fondue fondue tabano'
+						 'louis number number number tabano'
+						 'louis number number number fiji'
+						 'sesann sesann sesann alessi timeline';
+}
+
+// ### card ###
+
+.card {
+	min-height: 24vh;
+	text-transform: uppercase;
+	position: relative;
+	font-family: $robotoClight;
+	color: #333333;
+	font-size: 12px;
+
+	&__title {
+		font-size: 24px;
+		color: #333333;
+		@extend %zero-indents;
+	}
+
+	&-list {
+		list-style: none;
+		@extend %zero-indents;
+
+		&__item {
+			@extend %zero-indents;
+
+			&-bold {
+				font-weight: bold;
+			}
+
+			&-link {
+				display: block;
+				font-size: 13px;
+				text-decoration: none;
+				color: #fefefe;
+				font-family: $robotoCR;
+				transition: transform 0.5s;
+
+				&-first {
+					color: #000;
+				}
+
+				&:hover {
+					transform: scale(1.05, 1.2);
+				}
+			}
+		}
+	}
+
+	&__text {
+		@extend %zero-indents;
+	}
+
+	&__button {
+		font-weight: bold;
+		display: block;
+		text-decoration: none;
+		font-size: 18px;
+		margin: 0;
+		padding: 7px;
+		color: #333333;
+	}
+
+	&__liked {
+		display: block;
+	}
+}
+
+// ### end card ###
+
+.project-card {
+	overflow: hidden;
+	grid-area: project;
+	background: #ebb240;
+	font-family: $robotoCR;
+	
+	&__list {
+		@include item-position(32%, 35%);
+	}
+
+	&__title {
+		position: absolute;
+		right: 10%;
+		bottom: 33%;
+		color: #fefefe;
+		font-size: 48px;
+	}
+
+	&::after {
+		overflow: hidden;
+		@extend %inclined_line;
+	}
+}
+
+.fondue-card {
+	grid-area: fondue;
+	background: #fefefe url(../img/project-section/fondue.png) no-repeat right center;
+	background-size: contain;
+	
+	&__title {
+		@include item-position(18%, 17%);
+	}
+	&__item-wrapper {
+		@include item-position(25%, 17%);
+	}
+
+	&__button {
+		@include item-position(50%, 23%);
+	}
+}
+
+.potter-card {
+	grid-area: potter;
+	background: #dfe0d9 url(../img/project-section/potter.png) no-repeat right center;
+	background-size: contain;
+
+	&__title {
+		@include item-position(13%, 8%);
+	}
+
+	&__text {
+		max-width: 34%;
+		max-height: 34%;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@include item-position(28%, 8%);
+	}
+
+	&__button {
+		@include item-position(58%, 8%);
+	}
+}
+
+.tabano-card {
+	grid-area: tabano;
+	background: #f7f7f3 url(../img/project-section/tabano.png) 60% 10% no-repeat;
+	background-size: 60%;
+
+	&__title {
+		@include item-position(73%, 13%);
+	}
+
+	&__list {
+		@include item-position(80%, 13%);
+	}
+
+	&__button {
+		@include item-position(80%, 56%);
+	}
+}
+
+.louis-card {
+	grid-area: louis;
+	background: url(../img/project-section/louis.jpg) no-repeat center top;
+	background-size: cover;
+	color: #fefefe;
+
+	&__title {
+		color: #fefefe;
+		font-weight: normal;
+		@include item-position(8.6%, 10%);
+	}
+
+	&__list {
+		@include item-position(16.7%, 10%);
+	}
+
+	&__button {
+		color: #fefefe;
+		font-weight: normal;
+		@include item-position(34.8%, 10%);
+	}
+}
+
+.un-card {
+	grid-area: number;
+	background: #eaeaea url(../img/project-section/number.png) 30% center no-repeat;
+	background-size: contain;
+
+	&__title {
+		@include item-position(19.3%, 48%);
+	}
+
+	&__list {
+		@include item-position(27%, 48%);
+	}
+
+	&__button {
+		@include item-position(19.3%, 78%);
+	}
+}
+
+.fiji-card {
+	grid-area: fiji;
+	background: #fff url(../img/project-section/fiji.png) left center no-repeat;
+	background-size: contain;
+
+	&__title {
+		@include item-position(19.3%, 53%);
+	}
+
+	&__list {
+		@include item-position(34%, 53%);
+	}
+
+	&__button {
+		@include item-position(58.3%, 53%);
+	}
+}
+
+.sesann-card {
+	grid-area: sesann;
+	background: #fcfcfc url(../img/project-section/sesann.png) center 20% no-repeat;
+	background-size: 55%;
+
+	&__title {
+		@include item-position(66%, 20%);
+	}
+
+	&__list {
+		@include item-position(77%, 20%);
+	}
+
+	&__button {
+		@include item-position(77%, 53%);
+	}
+}
+
+.alessi-card {
+	grid-area: alessi;
+	background: url(../img/project-section/alessi.jpg) 0% 50% no-repeat;
+	background-size: cover;
+
+	&__title {
+		@include item-position(26.6%, 53%);
+	}
+
+	&__list {
+		@include item-position(40%, 53%);
+	}
+
+	&__button {
+		@include item-position(60%, 53%);
+	}
+}
+
+.timeline-card {
+	background: #ebb240;
+	grid-area: timeline;
+	display: block;
+	overflow: hidden;
+
+	&__list {
+		@include item-position(20%, 12%);
+	}
+
+	&::after {
+		overflow: hidden;
+		@extend %inclined_line;
+	}
+}
+
 
 @import 'media';

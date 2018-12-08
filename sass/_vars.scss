@@ -1,9 +1,16 @@
 $color-beige: #E9EAE2;
 $robotoCR: 'RobotoCondensed-Regular-grid';
+$robotoReg: 'RobotoCondensed-Regular-grid';
+$robotoClight: 'RobotoCondensed-Light-grid';
 
 %pos_absolute-block {
 	display: block;
 	position: absolute;
+}
+
+%zero-indents {
+	margin: 0;
+	padding: 0;
 }
 
 %inclined_line {
@@ -15,13 +22,16 @@ $robotoCR: 'RobotoCondensed-Regular-grid';
 	height: 0;
 	transform-origin: 0 0;
 	transform: rotate(-45deg);
-	border-top: 1px solid #fff;
+	border-top: 1px solid lighten(#fff, 25%);
 }
 
 %nav-menu__item {
 	@extend %pos_absolute-block;
-	background: #f8c255;
+	text-transform: uppercase;
+	font-family: $robotoReg;
+	font-size: 14px;
 	color: #fff;
+	background: #f8c255;
 	width: 90%;
 	height: 91%;
 	top: 2.4%;
@@ -31,6 +41,11 @@ $robotoCR: 'RobotoCondensed-Regular-grid';
 	opacity: 0;
 	visibility: hidden;
 	text-align: center;
-	font-size: 14px;
 	padding-top: calc(55% - 14px);
+}
+
+@mixin item-position($top, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
 }
