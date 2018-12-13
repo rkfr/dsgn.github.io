@@ -258,7 +258,7 @@
 // ### card ###
 
 .card {
-	min-height: 24vh;
+	min-height: 33vh;
 	text-transform: uppercase;
 	position: relative;
 	font-family: $robotoClight;
@@ -338,6 +338,7 @@
 		bottom: 33%;
 		color: #fefefe;
 		font-size: 48px;
+		font-weight: normal;
 	}
 
 	&::after {
@@ -515,5 +516,180 @@
 	}
 }
 
+// ------------ studio section
+
+.studio-section {
+	display: grid;
+	grid-template-rows: minmax(1fr, 465px) 1fr 1fr;
+	grid-row-gap: 65px;
+	grid-template-columns: minmax(200px, 465fr) 300fr 200px 100fr 300fr;
+	grid-template-areas: 'studio article article awards awards'
+						 'staff starck bellini bellini patricia'
+						 'staff starck bellini bellini patricia';
+	padding: 0 165px 0 0;
+	background: #e9eae2;
+}
+
+.studio-card {
+	grid-area: studio;
+	background: #ff9b6d;
+	font-family: $robotoCR;
+
+	&__title {
+		position: absolute;
+		right: 10%;
+		bottom: 33%;
+		color: #fefefe;
+		font-size: 48px;
+		font-weight: normal;
+		transition: transform 0.7s;
+	}
+}
+
+.article-card {
+	grid-area: article;
+	font-size: 18px;
+	padding: 95px 30px 70px 22%;
+
+	&__cite-bold {
+		font-family: $robotoCIBold;
+		
+	}
+
+	&__cite {
+		font-family: $robotoClight;
+	}
+}
+
+.awards-card {
+	grid-area: awards;
+	padding-top: 95px;
+	text-transform: uppercase;
+
+	&__image {
+		display: block;
+		max-width: 370px;
+		width: 100%;
+	}
+
+	&__title {
+		font-family: $robotoCBold;
+		font-size: 14px;
+	}
+	
+	&__list-wrap {
+		display: flex;
+	}
+
+	&__list {
+		display: block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-family: $robotoCR;
+		font-size: 12px;
+
+		&:nth-child(1) {
+			margin-right: 30px;
+		}
+	}
+}
+
+.staff-card {
+	grid-area: staff;
+	padding: 60px 30px 80px 35%;
+	font-size: 14px;
+
+	&__title {
+		font-family: $robotoCR;
+		text-transform: uppercase;
+	}
+
+	&__article {
+		font-family: $robotoClight;
+	}
+}
+
+.personal-card {
+	display: block;
+
+	&__image {
+		display: block;
+		max-width: 270px;
+		width: 100%;
+		height: auto;
+	}
+
+	&__name {
+		margin-bottom: 1px;
+		font-family: $robotoCBold;
+		font-size: 13px;
+	}
+
+	&__position {
+		margin-top: 1px;
+		font-family: $robotoCR;
+		font-size: 12px;
+	}
+
+	&__socials {
+		display: flex;
+		max-width: 270px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+.socials__cv {
+	margin-right: auto;
+	font-size: 22px;
+	color: #fd5000;
+	font-family: $robotoCR;
+}
+
+.socials-ico {
+		display: block;
+		width: 14px;
+		height: 14px;
+		margin-top: 10px;
+}
+
+.facebook {
+	// background: url(../img/studio-section/social-icons/facebook-icon.png);
+	background: url(../img/studio-section/social-icons/facebook-icon.png) center center no-repeat;
+	background-size: contain;
+}
+
+.twitter {
+	background: url(../img/studio-section/social-icons/twitter-icon.png) center center no-repeat;
+	background-size: contain;
+	margin-left: 15px;
+}
+
+.linkedin {
+	background: url(../img/studio-section/social-icons/linkedin-icon.png) center center no-repeat;
+	background-size: contain;
+	margin-left: 15px;
+}
+
+.google-pl {
+	background: url(../img/studio-section/social-icons/gp-icon.png) center center no-repeat;
+	background-size: contain;
+	margin-left: 15px;
+}
+
+// background: url(../img/studio-section/social-icons/facebook-icon.png);
+
+.starck-card {
+	grid-area: starck;
+}
+
+.bellini-card {
+	grid-area: bellini;
+}
+
+.patricia-card {
+	grid-area: patricia;
+}
 
 @import 'media';

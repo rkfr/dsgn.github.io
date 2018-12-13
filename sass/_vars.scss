@@ -1,7 +1,8 @@
 $color-beige: #E9EAE2;
 $robotoCR: 'RobotoCondensed-Regular-grid';
-$robotoReg: 'RobotoCondensed-Regular-grid';
 $robotoClight: 'RobotoCondensed-Light-grid';
+$robotoCIBold: 'RobotoCondensed-BoldItalic-grid';
+$robotoCBold: 'RobotoCondensed-Bold-grid';
 
 %pos_absolute-block {
 	display: block;
@@ -29,7 +30,7 @@ $robotoClight: 'RobotoCondensed-Light-grid';
 	@extend %pos_absolute-block;
 	padding-top: 32px;
 	text-transform: uppercase;
-	font-family: $robotoReg;
+	font-family: $robotoCR;
 	font-size: 14px;
 	color: #fff;
 	background: #f8c255;

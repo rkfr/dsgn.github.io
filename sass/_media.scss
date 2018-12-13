@@ -91,10 +91,21 @@
 		&__button {
 			@include item-position(30%, 78%);
 		}
+	}
+
+	.studio-card {
+		&__title {
+			transform: rotate(90deg);
+		}
+	}
+
+	.staff-card {
+		padding-left: 7%;
+		padding-top: 5%;
 	}	
 }
 
-@media screen and(max-width: 900px) {
+@media screen and(max-width: 940px) {
 	.projects-section {
 		grid-template-rows: 1fr 1fr 1fr 1fr;
 		grid-template-columns: 1fr 1fr;
@@ -230,6 +241,37 @@
 			@include item-position(20%, 12%);
 		}
 	}
+
+	.studio-section {
+		grid-template-rows: 1fr 1fr 2fr;
+		grid-row-gap: 65px;
+		grid-column-gap: 15px;
+		grid-template-columns: minmax(80px, 1fr) 2fr 2fr;
+		grid-template-areas: 'studio staff bellini'
+							 'studio starck patricia'
+							 'article article awards';
+		padding: 0;
+	}
+
+	.article-card {
+		padding: 30px;
+	}
+
+	.awards-card {
+		padding: 30px;
+	}
+
+	.starck-card {
+		padding: 10px;
+	}
+
+	.bellini-card {
+		padding: 10px;
+	}
+
+	.patricia-card {
+		padding: 0 20px;
+	}
 }
 
 @media screen and(max-width: 730px) {
@@ -263,7 +305,7 @@
 
 }
 
-@media screen and(max-width: 530px) {
+@media screen and(max-width: 550px) {
 	.projects-section {
 		grid-template-rows: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr 1fr 2fr;
 		grid-template-columns: 1fr;
@@ -292,5 +334,57 @@
 		&__button {
 			@include item-position(58.3%, 68%);
 		}
+	}
+
+	.studio-section {
+		justify-items: center;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		grid-gap: 10px;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+		grid-template-areas: 'studio'
+							 'staff'
+							 'awards'
+							 'starck'
+							 'bellini'
+							 'patricia'
+							 'article';
+		margin: 0;
+		padding: 0;
+	}
+
+	.studio-card {
+		width: 100%;
+		height: 100%;
+		display: block;
+
+		&__title {
+			transform: rotate(0deg);
+		}
+	}
+
+	.article-card {
+		margin: 0;
+		padding: 0 20px;
+	}
+
+	.awards-card {
+		margin: 0;
+		padding: 0;
+
+		&__list {
+
+			&:nth-child(1) {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.staff-card {
+		margin: 0;
+		padding: 0 20px;
 	}
 }
