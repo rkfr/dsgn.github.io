@@ -98,7 +98,7 @@
   src: url(../fonts/font-awesome/FontAwesome.otf) format("OpenType");
 }
 
-.menu::after, .project-card::after, .timeline-card::after, .nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5, .menu__left-item, .menu__right-item, .nav-menu, .nav-menu__item-base {
+.project-card::after, .timeline-card::after, .nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5, .menu__left-item, .menu__right-item, .nav-menu, .nav-menu__item-base {
   display: block;
   position: absolute;
 }
@@ -108,7 +108,7 @@
   padding: 0;
 }
 
-.menu::after, .project-card::after, .timeline-card::after {
+.project-card::after, .timeline-card::after {
   content: '';
   left: 0%;
   bottom: 0%;
@@ -120,21 +120,18 @@
 }
 
 .nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5 {
+  padding-top: 32px;
   text-transform: uppercase;
   font-family: "RobotoCondensed-Regular-grid";
   font-size: 14px;
   color: #fff;
   background: #f8c255;
-  width: 90%;
-  height: 91%;
-  top: 2.4%;
-  padding: 0;
-  margin: 0;
+  width: 80px;
+  height: 80px;
   text-decoration: none;
   opacity: 0;
   visibility: hidden;
   text-align: center;
-  padding-top: calc(55% - 14px);
 }
 
 *,
@@ -269,10 +266,8 @@
   cursor: pointer;
   right: 31.5%;
   top: 10%;
-  width: 100%;
-  height: 100%;
-  max-width: 21%;
-  max-height: 20%;
+  width: 80px;
+  height: 80px;
 }
 
 .nav-menu__item-base {
@@ -281,7 +276,7 @@
 }
 
 .nav-menu__item-1 {
-  left: -75%;
+  left: -87%;
   transform: translateX(90%);
   transition: 1s;
 }
@@ -297,7 +292,7 @@
 }
 
 .nav-menu__item-2 {
-  left: -150%;
+  left: -170%;
   transform: translateX(180%);
   transition: 1s;
 }
@@ -313,7 +308,7 @@
 }
 
 .nav-menu__item-3 {
-  left: -225%;
+  left: -255%;
   transform: translateX(270%);
   transition: 1s;
 }
@@ -329,7 +324,7 @@
 }
 
 .nav-menu__item-4 {
-  left: -300%;
+  left: -340%;
   transform: translateX(360%);
   transition: 1s;
 }
@@ -345,7 +340,7 @@
 }
 
 .nav-menu__item-5 {
-  left: -375%;
+  left: -425%;
   transform: translateX(450%);
   transition: 1s;
 }
@@ -363,7 +358,7 @@
 .projects-section {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: minmax(230px, 300fr) 165fr 270fr 300fr 465fr;
+  grid-template-columns: minmax(230px, 300fr) 165fr 270fr 300fr minmax(300px, 465fr);
   grid-template-areas: 'project project fondue fondue potter' 'project project fondue fondue tabano' 'louis number number number tabano' 'louis number number number fiji' 'sesann sesann sesann alessi timeline';
 }
 
@@ -572,7 +567,7 @@
 .un-card__button {
   position: absolute;
   top: 19.3%;
-  left: 78%;
+  left: 28%;
 }
 
 .fiji-card {
@@ -664,168 +659,277 @@
   overflow: hidden;
 }
 
-@font-face {
-  font-family: 'Roboto-Black-grid';
-  src: url(../fonts/roboto/Roboto-Black.ttf) format("truetype");
+@media screen and (max-width: 1200px) {
+  .un-card__title {
+    position: absolute;
+    top: 11.3%;
+    left: 68%;
+  }
+  .un-card__list {
+    position: absolute;
+    top: 27%;
+    left: 68%;
+  }
+  .un-card__button {
+    position: absolute;
+    top: 11.3%;
+    left: 33%;
+  }
+  .tabano-card {
+    background-size: 50%;
+  }
+  .tabano-card__title {
+    position: absolute;
+    top: 53%;
+    left: 3%;
+  }
+  .tabano-card__list {
+    position: absolute;
+    top: 70%;
+    left: 3%;
+  }
+  .potter-card {
+    background-size: 50%;
+  }
+  .potter-card__title {
+    position: absolute;
+    top: 3%;
+    left: 8%;
+  }
+  .potter-card__text {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+  }
+  .potter-card__button {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+  }
+  .project-card__list {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  .project-card__title {
+    right: 10%;
+    bottom: 13%;
+  }
+  .fondue-card__title {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+  }
+  .alessi-card__title {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+  }
+  .alessi-card__list {
+    position: absolute;
+    top: 30%;
+    left: 23%;
+  }
+  .alessi-card__button {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+  }
+  .sesann-card__title {
+    position: absolute;
+    top: 26%;
+    left: 3%;
+  }
+  .sesann-card__list {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+  }
+  .sesann-card__button {
+    position: absolute;
+    top: 30%;
+    left: 78%;
+  }
 }
 
-@font-face {
-  font-family: 'Roboto-BlackItalic-grid';
-  src: url(../fonts/roboto/Roboto-BlackItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Bold-grid';
-  src: url(../fonts/roboto/Roboto-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-BoldItalic-grid';
-  src: url(../fonts/roboto/Roboto-BoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-Bold-grid';
-  src: url(../fonts/roboto/RobotoCondensed-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-BoldItalic-grid';
-  src: url(../fonts/roboto/RobotoCondensed-BoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-Italic-grid';
-  src: url(../fonts/roboto/RobotoCondensed-Italic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-Light-grid';
-  src: url(../fonts/roboto/RobotoCondensed-Light.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-LightItalic-grid';
-  src: url(../fonts/roboto/RobotoCondensed-LightItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'RobotoCondensed-Regular-grid';
-  src: url(../fonts/roboto/RobotoCondensed-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Italic-grid';
-  src: url(../fonts/roboto/Roboto-Italic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Light-grid';
-  src: url(../fonts/roboto/Roboto-Light.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-LightItalic-grid';
-  src: url(../fonts/roboto/Roboto-LightItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Medium-grid';
-  src: url(../fonts/roboto/Roboto-Medium.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-MediumItalic-grid';
-  src: url(../fonts/roboto/Roboto-MediumItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Regular-grid';
-  src: url(../fonts/roboto/Roboto-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-Thin-grid';
-  src: url(../fonts/roboto/Roboto-Thin.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto-ThinItalic-grid';
-  src: url(../fonts/roboto/Roboto-ThinItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Fontawesome-webfont-grid';
-  src: url(../fonts/font-awesome/fontawesome-webfont.ttf) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.woff) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.eot) format("OpenType");
-}
-
-@font-face {
-  font-family: 'FontAwesome-grid';
-  src: url(../fonts/font-awesome/FontAwesome.otf) format("OpenType");
-}
-
-.menu::after, .project-card::after, .timeline-card::after, .nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5, .menu__left-item, .menu__right-item, .nav-menu, .nav-menu__item-base {
-  display: block;
-  position: absolute;
-}
-
-.card__title, .card-list, .card-list__item, .card__text {
-  margin: 0;
-  padding: 0;
-}
-
-.menu::after, .project-card::after, .timeline-card::after {
-  content: '';
-  left: 0%;
-  bottom: 0%;
-  width: 142%;
-  height: 0;
-  transform-origin: 0 0;
-  transform: rotate(-45deg);
-  border-top: 1px solid white;
-}
-
-.nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5 {
-  text-transform: uppercase;
-  font-family: "RobotoCondensed-Regular-grid";
-  font-size: 14px;
-  color: #fff;
-  background: #f8c255;
-  width: 90%;
-  height: 91%;
-  top: 2.4%;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-  padding-top: calc(55% - 14px);
+@media screen and (max-width: 900px) {
+  .projects-section {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'project fondue' 'louis number' 'potter tabano' 'alessi fiji' 'sesann timeline';
+  }
+  .card {
+    min-height: 33vh;
+  }
+  .project-card__list {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  .project-card__title {
+    right: 10%;
+    bottom: 13%;
+  }
+  .fondue-card__title {
+    position: absolute;
+    top: 13%;
+    left: 17%;
+  }
+  .fondue-card__item-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 17%;
+  }
+  .fondue-card__button {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+  }
+  .potter-card {
+    background-size: 50%;
+  }
+  .potter-card__title {
+    position: absolute;
+    top: 13%;
+    left: 8%;
+  }
+  .potter-card__text {
+    position: absolute;
+    top: 28%;
+    left: 8%;
+  }
+  .potter-card__button {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+  }
+  .tabano-card {
+    background-size: 50%;
+  }
+  .tabano-card__title {
+    position: absolute;
+    top: 33%;
+    left: 7%;
+  }
+  .tabano-card__list {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+  }
+  .louis-card {
+    background-position: 50% 60%;
+  }
+  .louis-card__title {
+    position: absolute;
+    top: 8.6%;
+    left: 10%;
+  }
+  .louis-card__list {
+    position: absolute;
+    top: 22%;
+    left: 10%;
+  }
+  .louis-card__button {
+    position: absolute;
+    top: 46%;
+    left: 10%;
+  }
+  .un-card__title {
+    position: absolute;
+    top: 11.3%;
+    left: 48%;
+  }
+  .un-card__list {
+    position: absolute;
+    top: 27%;
+    left: 48%;
+  }
+  .un-card__button {
+    position: absolute;
+    top: 79.3%;
+    left: 18%;
+  }
+  .sesann-card__title {
+    position: absolute;
+    top: 46%;
+    left: 10%;
+  }
+  .sesann-card__list {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+  }
+  .sesann-card__button {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+  }
+  .alessi-card__title {
+    position: absolute;
+    top: 26.6%;
+    left: 53%;
+  }
+  .alessi-card__list {
+    position: absolute;
+    top: 40%;
+    left: 53%;
+  }
+  .alessi-card__button {
+    position: absolute;
+    top: 60%;
+    left: 53%;
+  }
+  .timeline-card__list {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+  }
 }
 
 @media screen and (max-width: 730px) {
   .header-section__content {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   .logo {
     grid-column: 1;
+    grid-row: 1;
     position: relative;
     left: 7%;
   }
   .chairs-img {
-    display: none;
+    grid-column: 2;
+    grid-row: 1;
   }
   .menu {
-    grid-column: 2;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
   .menu__contacts {
     left: 42%;
   }
-  .nav-menu {
-    max-width: 72px;
-    max-height: 72px;
+}
+
+@media screen and (max-width: 530px) {
+  .projects-section {
+    grid-template-rows: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'project' 'fondue' 'number' 'louis' 'potter' 'tabano' 'alessi' 'fiji' 'sesann' 'timeline';
   }
-  .nav-menu__item-1, .nav-menu__item-2, .nav-menu__item-3, .nav-menu__item-4, .nav-menu__item-5 {
-    top: 1.5%;
+  .fiji-card__title {
+    position: absolute;
+    top: 19.3%;
+    left: 68%;
+  }
+  .fiji-card__list {
+    position: absolute;
+    top: 34%;
+    left: 68%;
+  }
+  .fiji-card__button {
+    position: absolute;
+    top: 58.3%;
+    left: 68%;
   }
 }

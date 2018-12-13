@@ -1,36 +1,296 @@
-@import 'fonts';
-@import 'vars';
+// @import 'fonts';
+// @import 'vars';
+
+@media screen and(max-width: 1200px) {
+	.un-card {
+
+		&__title {
+			@include item-position(11.3%, 68%);
+		}
+
+		&__list {
+			@include item-position(27%, 68%);
+		}
+
+		&__button {
+			@include item-position(11.3%, 33%);
+		}
+	}
+
+	.tabano-card {
+		background-size: 50%;
+
+		&__title {
+			@include item-position(53%, 3%);
+		}
+
+		&__list {
+			@include item-position(70%, 3%);
+		}
+	}
+
+	.potter-card {
+		background-size: 50%;
+
+		&__title {
+			@include item-position(3%, 8%);
+		}
+
+		&__text {
+			@include item-position(20%, 8%);
+		}
+
+		&__button {
+			@include item-position(55%, 8%);
+		}
+	}
+
+	.project-card {
+	
+		&__list {
+			@include item-position(15%, 20%);
+		}
+
+		&__title {
+			right: 10%;
+			bottom: 13%;
+		}
+	}
+
+	.fondue-card {
+		
+		&__title {
+			@include item-position(10%, 17%);
+		}
+	}
+
+	.alessi-card {
+
+		&__title {
+			@include item-position(10%, 23%);
+		}
+
+		&__list {
+			@include item-position(30%, 23%);
+		}
+
+		&__button {
+			@include item-position(60%, 23%);
+		}
+	}
+	.sesann-card {
+
+		&__title {
+			@include item-position(26%, 3%);
+		}
+
+		&__list {
+			@include item-position(50%, 3%);
+		}
+
+		&__button {
+			@include item-position(30%, 78%);
+		}
+	}	
+}
+
+@media screen and(max-width: 900px) {
+	.projects-section {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'project fondue'
+						 'louis number'
+						 'potter tabano'
+						 'alessi fiji'
+						 'sesann timeline';
+	}
+
+	.card {
+		min-height: 33vh;
+	}
+
+	.project-card {
+	
+		&__list {
+			@include item-position(15%, 20%);
+		}
+
+		&__title {
+			right: 10%;
+			bottom: 13%;
+		}
+	}
+
+	.fondue-card {
+		
+		&__title {
+			@include item-position(13%, 17%);
+		}
+		&__item-wrapper {
+			@include item-position(30%, 17%);
+		}
+
+		&__button {
+			@include item-position(60%, 23%);
+		}
+	}
+
+	.potter-card {
+		background-size: 50%;
+
+		&__title {
+			@include item-position(13%, 8%);
+		}
+
+		&__text {
+			@include item-position(28%, 8%);
+		}
+
+		&__button {
+			@include item-position(65%, 8%);
+		}
+	}
+
+	.tabano-card {
+		background-size: 50%;
+
+		&__title {
+			@include item-position(33%, 7%);
+		}
+
+		&__list {
+			@include item-position(50%, 7%);
+		}
+	}
+
+	.louis-card {
+		background-position: 50% 60%;
+
+		&__title {
+			@include item-position(8.6%, 10%);
+		}
+
+		&__list {
+			@include item-position(22%, 10%);
+		}
+
+		&__button {
+			@include item-position(46%, 10%);
+		}
+	}
+
+	.un-card {
+
+		&__title {
+			@include item-position(11.3%, 48%);
+		}
+
+		&__list {
+			@include item-position(27%, 48%);
+		}
+
+		&__button {
+			@include item-position(79.3%, 18%);
+		}
+	}
+
+	.sesann-card {
+
+		&__title {
+			@include item-position(46%, 10%);
+		}
+
+		&__list {
+			@include item-position(60%, 10%);
+		}
+
+		&__button {
+			@include item-position(60%, 60%);
+		}
+	}
+
+	.alessi-card {
+
+		&__title {
+			@include item-position(26.6%, 53%);
+		}
+
+		&__list {
+			@include item-position(40%, 53%);
+		}
+
+		&__button {
+			@include item-position(60%, 53%);
+		}
+	}
+
+	.timeline-card {
+
+		&__list {
+			@include item-position(20%, 12%);
+		}
+	}
+}
 
 @media screen and(max-width: 730px) {
 	
 	.header-section__content {
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 
 	.logo {
 		grid-column: 1;
+		grid-row: 1;
 		position: relative;
 		left: 7%;
 	}
 
 	.chairs-img {
-		display: none;
+		// display: none;
+		grid-column: 2;
+		grid-row: 1;
 	}
 	.menu {
-		grid-column: 2;
+		grid-row: 2;
+		grid-column-start: 1;
+		grid-column-end: 3;
 
 		&__contacts {
 			left: 42%;
 		}
 	}
 
-	.nav-menu {
-		max-width: 72px;
-		max-height: 72px;
+}
+
+@media screen and(max-width: 530px) {
+	.projects-section {
+		grid-template-rows: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr 1fr 2fr;
+		grid-template-columns: 1fr;
+		grid-template-areas: 'project'
+							 'fondue'
+							 'number'
+						  	 'louis'
+							 'potter'
+							 'tabano'
+							 'alessi'
+							 'fiji'
+							 'sesann'
+							 'timeline';
 	}
 
-	%nav-menu__item {
-		top: 1.5%;
-	}
+	.fiji-card {
 
+		&__title {
+			@include item-position(19.3%, 68%);
+		}
+
+		&__list {
+			@include item-position(34%, 68%);
+		}
+
+		&__button {
+			@include item-position(58.3%, 68%);
+		}
+	}
 }
