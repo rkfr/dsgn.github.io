@@ -1159,11 +1159,7 @@
   }
   .awards-card {
     margin: 0;
-    padding: 0;
-  }
-  .awards-card__list:nth-child(1) {
-    margin: 0;
-    padding: 0;
+    padding: 0 20px;
   }
   .staff-card {
     margin: 0;
