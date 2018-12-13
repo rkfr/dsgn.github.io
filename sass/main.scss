@@ -246,7 +246,7 @@
 
 .projects-section {
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1.3fr;
 	grid-template-columns: minmax(230px, 300fr) 165fr 270fr 300fr minmax(300px, 465fr);
 	grid-template-areas: 'project project fondue fondue potter'
 						 'project project fondue fondue tabano'
@@ -522,7 +522,7 @@
 	display: grid;
 	grid-template-rows: minmax(1fr, 465px) 1fr 1fr;
 	grid-row-gap: 65px;
-	grid-template-columns: minmax(200px, 465fr) 300fr 200px 100fr 300fr;
+	grid-template-columns: minmax(200px, 465fr) 300fr 200fr 100fr 300fr;
 	grid-template-areas: 'studio article article awards awards'
 						 'staff starck bellini bellini patricia'
 						 'staff starck bellini bellini patricia';
@@ -553,7 +553,6 @@
 
 	&__cite-bold {
 		font-family: $robotoCIBold;
-		
 	}
 
 	&__cite {
@@ -575,6 +574,7 @@
 	&__title {
 		font-family: $robotoCBold;
 		font-size: 14px;
+		font-weight: normal;
 	}
 	
 	&__list-wrap {
@@ -624,6 +624,7 @@
 		margin-bottom: 1px;
 		font-family: $robotoCBold;
 		font-size: 13px;
+		font-weight: normal;
 	}
 
 	&__position {
@@ -655,7 +656,6 @@
 }
 
 .facebook {
-	// background: url(../img/studio-section/social-icons/facebook-icon.png);
 	background: url(../img/studio-section/social-icons/facebook-icon.png) center center no-repeat;
 	background-size: contain;
 }
@@ -677,8 +677,6 @@
 	background-size: contain;
 	margin-left: 15px;
 }
-
-// background: url(../img/studio-section/social-icons/facebook-icon.png);
 
 .starck-card {
 	grid-area: starck;
