@@ -909,6 +909,66 @@
   grid-column: 5;
 }
 
+.footer {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  background: #e9eae2;
+}
+
+.map {
+  flex-basis: 50%;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-section {
+  position: relative;
+  flex-basis: 50%;
+  display: flex;
+}
+
+.footer-section__adress {
+  position: absolute;
+  top: 150px;
+  left: 15%;
+  width: 100%;
+  max-width: 150px;
+  color: #333333;
+  font-family: "RobotoCondensed-Regular-grid";
+  font-size: 13px;
+}
+
+.footer-section__contacts {
+  position: absolute;
+  top: 230px;
+  left: 15%;
+  width: 100%;
+  max-width: 150px;
+  color: #333333;
+  font-family: "RobotoCondensed-Regular-grid";
+  font-size: 13px;
+}
+
+.footer-section__logo {
+  position: relative;
+  left: 55%;
+  margin-top: 150px;
+  margin-bottom: 145px;
+}
+
+.footer-section__copyright {
+  position: absolute;
+  top: 90%;
+  left: 17%;
+  color: #191919;
+  font-family: "RobotoCondensed-Regular-grid";
+  font-size: 12px;
+}
+
 @media screen and (max-width: 1200px) {
   .un-card__title {
     position: absolute;
@@ -1271,6 +1331,15 @@
   .nav-menu:hover .nav-menu__item-5 {
     transform: translateY(0);
   }
+  .footer {
+    flex-direction: column;
+  }
+  .map {
+    height: 320px;
+  }
+  .footer-section__logo {
+    left: 60%;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1325,5 +1394,30 @@
   .staff-card {
     margin: 0;
     padding: 0 20px;
+  }
+  .footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-section__logo {
+    display: block;
+    position: static;
+    margin: 20px 0;
+  }
+  .footer-section__adress {
+    margin: 20px 0;
+    display: block;
+    position: static;
+  }
+  .footer-section__contacts {
+    margin: 20px 0;
+    display: block;
+    position: static;
+  }
+  .footer-section__copyright {
+    position: static;
+    margin: 20px;
   }
 }

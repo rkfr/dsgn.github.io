@@ -399,6 +399,20 @@
 		}
 	}
 
+	.footer {
+		flex-direction: column;
+	}
+
+	.map {
+		height: 320px;
+	}
+
+	.footer-section {
+		&__logo {
+			left: 60%;
+		}
+	}
+
 	// --- nav menu end ---
 }
 
@@ -475,6 +489,38 @@
 	.staff-card {
 		margin: 0;
 		padding: 0 20px;
+	}
+
+	// footer
+
+	.footer-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		&__logo {
+			display: block;
+			position: static;
+			margin: 20px 0;
+		}
+
+		&__adress {
+			margin: 20px 0;
+			display: block;
+			position: static;
+		}
+
+		&__contacts {
+			margin: 20px 0;
+			display: block;
+			position: static;
+		}
+
+		&__copyright {
+			position: static;
+			margin: 20px;
+		}
 	}
 
 }
