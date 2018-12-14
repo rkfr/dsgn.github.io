@@ -134,6 +134,18 @@
   text-align: center;
 }
 
+.card-list__item-link::before, .card__button::before, .socials__cv::after {
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  content: '';
+  display: block;
+  height: 16px;
+  width: 21px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -398,6 +410,17 @@
   color: #000;
 }
 
+.card-list__item-link::before {
+  visibility: hidden;
+  background: url(../img/arrow-white.png) center center;
+  top: 0;
+  left: -25px;
+}
+
+.card-list__item-link:hover:before {
+  visibility: visible;
+}
+
 .card-list__item-link:hover {
   transform: scale(1.05, 1.2);
 }
@@ -410,10 +433,33 @@
   margin: 0;
   padding: 7px;
   color: #333333;
+  cursor: pointer;
+}
+
+.card__button::before {
+  visibility: hidden;
+  background: url(../img/arrow-orange.png) center center;
+}
+
+.card__button:hover:before {
+  visibility: visible;
 }
 
 .card__liked {
+  position: relative;
   display: block;
+  color: #ff0000;
+  font-family: "RobotoCondensed-Light-grid";
+  font-size: 11px;
+}
+
+.card__liked::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  width: 30px;
+  height: 25px;
+  background: url(../img/heart-ico.png) center center;
 }
 
 .project-card {
@@ -462,6 +508,12 @@
   left: 23%;
 }
 
+.fondue-card__like {
+  position: absolute;
+  top: 83%;
+  left: 30%;
+}
+
 .potter-card {
   grid-area: potter;
   background: #dfe0d9 url(../img/project-section/potter.png) no-repeat right center;
@@ -491,6 +543,12 @@
   left: 8%;
 }
 
+.potter-card__like {
+  position: absolute;
+  top: 88%;
+  left: 21%;
+}
+
 .tabano-card {
   grid-area: tabano;
   background: #f7f7f3 url(../img/project-section/tabano.png) 60% 10% no-repeat;
@@ -513,6 +571,12 @@
   position: absolute;
   top: 80%;
   left: 56%;
+}
+
+.tabano-card__like {
+  position: absolute;
+  top: 86%;
+  left: 81%;
 }
 
 .louis-card {
@@ -544,6 +608,26 @@
   left: 10%;
 }
 
+.louis-card__like {
+  position: absolute;
+  top: 50%;
+  left: 31%;
+  position: relative;
+  display: block;
+  color: #ff0000;
+  font-family: "RobotoCondensed-Light-grid";
+  font-size: 11px;
+}
+
+.louis-card__like::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  width: 30px;
+  height: 25px;
+  background: url(../img/heart-ico-white.png) center center;
+}
+
 .un-card {
   grid-area: number;
   background: #eaeaea url(../img/project-section/number.png) 30% center no-repeat;
@@ -552,7 +636,7 @@
 
 .un-card__title {
   position: absolute;
-  top: 19.3%;
+  top: 20%;
   left: 48%;
 }
 
@@ -564,8 +648,14 @@
 
 .un-card__button {
   position: absolute;
-  top: 19.3%;
-  left: 28%;
+  top: 19%;
+  left: 76%;
+}
+
+.un-card__like {
+  position: absolute;
+  top: 33%;
+  left: 80%;
 }
 
 .fiji-card {
@@ -592,6 +682,12 @@
   left: 53%;
 }
 
+.fiji-card__like {
+  position: absolute;
+  top: 84%;
+  left: 67%;
+}
+
 .sesann-card {
   grid-area: sesann;
   background: #fcfcfc url(../img/project-section/sesann.png) center 20% no-repeat;
@@ -616,6 +712,12 @@
   left: 53%;
 }
 
+.sesann-card__like {
+  position: absolute;
+  top: 85%;
+  left: 74%;
+}
+
 .alessi-card {
   grid-area: alessi;
   background: url(../img/project-section/alessi.jpg) 0% 50% no-repeat;
@@ -638,6 +740,12 @@
   position: absolute;
   top: 60%;
   left: 53%;
+}
+
+.alessi-card__like {
+  position: absolute;
+  top: 85%;
+  left: 61%;
 }
 
 .timeline-card {
@@ -715,10 +823,15 @@
   font-family: "RobotoCondensed-Bold-grid";
   font-size: 14px;
   font-weight: normal;
+  margin: 10px 7px 0 0;
 }
 
 .awards-card__list-wrap {
+  padding-top: 10px;
+  position: relative;
   display: flex;
+  max-width: 370px;
+  border-top: 1px solid #bfc0b9;
 }
 
 .awards-card__list {
@@ -781,10 +894,29 @@
 }
 
 .socials__cv {
+  position: relative;
+  display: block;
   margin-right: auto;
+  padding-left: 10px;
   font-size: 22px;
-  color: #fd5000;
+  text-decoration: none;
   font-family: "RobotoCondensed-Regular-grid";
+}
+
+.socials__cv::after {
+  left: 35px;
+  visibility: hidden;
+  background: url(../img/arrow-red.png) center center;
+}
+
+.socials__cv:hover:after {
+  visibility: visible;
+}
+
+.socials__cv-link {
+  display: block;
+  text-decoration: none;
+  color: #fd5000;
 }
 
 .socials-ico {
@@ -792,6 +924,7 @@
   width: 14px;
   height: 14px;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 .facebook {
@@ -918,6 +1051,7 @@
 
 .map {
   flex-basis: 50%;
+  min-height: 300px;
 }
 
 .map__iframe {
@@ -970,21 +1104,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .un-card__title {
-    position: absolute;
-    top: 11.3%;
-    left: 68%;
-  }
-  .un-card__list {
-    position: absolute;
-    top: 27%;
-    left: 68%;
-  }
-  .un-card__button {
-    position: absolute;
-    top: 11.3%;
-    left: 33%;
-  }
   .tabano-card {
     background-size: 50%;
   }
@@ -1029,21 +1148,6 @@
     position: absolute;
     top: 10%;
     left: 17%;
-  }
-  .alessi-card__title {
-    position: absolute;
-    top: 10%;
-    left: 23%;
-  }
-  .alessi-card__list {
-    position: absolute;
-    top: 30%;
-    left: 23%;
-  }
-  .alessi-card__button {
-    position: absolute;
-    top: 60%;
-    left: 23%;
   }
   .sesann-card__title {
     position: absolute;
@@ -1202,7 +1306,7 @@
     left: 12%;
   }
   .studio-section {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
     grid-row-gap: 65px;
     grid-column-gap: 15px;
     grid-template-columns: minmax(80px, 1fr) 2fr 2fr;
@@ -1290,6 +1394,9 @@
   }
   .menu__contacts {
     left: 42%;
+  }
+  .nav-menu {
+    z-index: 1;
   }
   .nav-menu__item-1 {
     top: 0;

@@ -42,6 +42,19 @@ $robotoCBold: 'RobotoCondensed-Bold-grid';
 	text-align: center;
 }
 
+%pointer-orange {
+	position: absolute;
+	left: -20px;
+	top: 8px;
+	content: '';
+	display: block;
+	height: 16px;
+	width: 21px;
+	// background: url(../img/arrow-orange.png) center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 @mixin item-position($top, $left) {
 	position: absolute;
 	top: $top;
@@ -53,3 +66,4 @@ $robotoCBold: 'RobotoCondensed-Bold-grid';
 	left: $left;
 	transform: translateX(0);
 }
+

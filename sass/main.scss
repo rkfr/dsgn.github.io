@@ -293,6 +293,17 @@
 				&-first {
 					color: #000;
 				}
+				&::before {
+					visibility: hidden;
+					@extend %pointer-orange;
+					background: url(../img/arrow-white.png) center center;
+					top: 0;
+					left: -25px;
+				}
+
+				&:hover:before {
+					visibility: visible;
+				}
 
 				&:hover {
 					transform: scale(1.05, 1.2);
@@ -313,10 +324,36 @@
 		margin: 0;
 		padding: 7px;
 		color: #333333;
+		cursor: pointer;
+
+		&::before {
+			visibility: hidden;
+			@extend %pointer-orange;
+			background: url(../img/arrow-orange.png) center center;
+		}
+
+		&:hover:before {
+			visibility: visible;
+		}
 	}
 
 	&__liked {
+		position: relative;
 		display: block;
+		color: #ff0000;
+		font-family: $robotoClight;
+		font-size: 11px;
+		// top: 50px;
+		// left: 50px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -25px;
+			width: 30px;
+			height: 25px;
+			background: url(../img/heart-ico.png) center center;
+		}
 	}
 }
 
@@ -357,6 +394,10 @@
 	&__button {
 		@include item-position(50%, 23%);
 	}
+
+	&__like {
+		@include item-position(83%, 30%);
+	}
 }
 
 .potter-card {
@@ -380,6 +421,10 @@
 	&__button {
 		@include item-position(58%, 8%);
 	}
+
+	&__like {
+		@include item-position(88%, 21%);
+	}
 }
 
 .tabano-card {
@@ -397,6 +442,10 @@
 
 	&__button {
 		@include item-position(80%, 56%);
+	}
+
+	&__like {
+		@include item-position(86%, 81%);
 	}
 }
 
@@ -421,6 +470,24 @@
 		font-weight: normal;
 		@include item-position(34.8%, 10%);
 	}
+
+	&__like {
+		@include item-position(50%, 31%);
+		position: relative;
+		display: block;
+		color: #ff0000;
+		font-family: $robotoClight;
+		font-size: 11px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -25px;
+			width: 30px;
+			height: 25px;
+			background: url(../img/heart-ico-white.png) center center;
+		}
+	}
 }
 
 .un-card {
@@ -429,7 +496,7 @@
 	background-size: contain;
 
 	&__title {
-		@include item-position(19.3%, 48%);
+		@include item-position(20%, 48%);
 	}
 
 	&__list {
@@ -437,7 +504,11 @@
 	}
 
 	&__button {
-		@include item-position(19.3%, 28%);
+		@include item-position(19%, 76%);
+	}
+
+	&__like {
+		@include item-position(33%, 80%);
 	}
 }
 
@@ -457,6 +528,10 @@
 	&__button {
 		@include item-position(58.3%, 53%);
 	}
+
+	&__like {
+		@include item-position(84%, 67%);
+	}
 }
 
 .sesann-card {
@@ -475,6 +550,10 @@
 	&__button {
 		@include item-position(77%, 53%);
 	}
+
+	&__like {
+		@include item-position(85%, 74%);
+	}
 }
 
 .alessi-card {
@@ -492,6 +571,10 @@
 
 	&__button {
 		@include item-position(60%, 53%);
+	}
+
+	&__like {
+		@include item-position(85%, 61%);
 	}
 }
 
@@ -572,10 +655,15 @@
 		font-family: $robotoCBold;
 		font-size: 14px;
 		font-weight: normal;
+		margin: 10px 7px 0 0;
 	}
 	
 	&__list-wrap {
+		padding-top: 10px;
+		position: relative;
 		display: flex;
+		max-width: 370px;
+		border-top: 1px solid #bfc0b9;
 	}
 
 	&__list {
@@ -639,10 +727,31 @@
 }
 
 .socials__cv {
+	position: relative;
+	display: block;
 	margin-right: auto;
+	padding-left: 10px;
 	font-size: 22px;
-	color: #fd5000;
+	text-decoration: none;
 	font-family: $robotoCR;
+
+	&::after {
+			left: 35px;
+			visibility: hidden;
+			@extend %pointer-orange;
+			background: url(../img/arrow-red.png) center center;
+		}
+
+	&:hover:after {
+		visibility: visible;
+	}
+
+	&-link {
+		display: block;
+		text-decoration: none;
+		color: #fd5000;
+	}
+
 }
 
 .socials-ico {
@@ -650,6 +759,7 @@
 		width: 14px;
 		height: 14px;
 		margin-top: 10px;
+		margin-right: 10px;
 }
 
 .facebook {
@@ -778,6 +888,7 @@
 
 .map {
 	flex-basis: 50%;
+	min-height: 300px;
 
 	&__iframe {
 		width: 100%;

@@ -2,20 +2,6 @@
 // @import 'vars';
 
 @media screen and(max-width: 1200px) {
-	.un-card {
-
-		&__title {
-			@include item-position(11.3%, 68%);
-		}
-
-		&__list {
-			@include item-position(27%, 68%);
-		}
-
-		&__button {
-			@include item-position(11.3%, 33%);
-		}
-	}
 
 	.tabano-card {
 		background-size: 50%;
@@ -64,20 +50,6 @@
 		}
 	}
 
-	.alessi-card {
-
-		&__title {
-			@include item-position(10%, 23%);
-		}
-
-		&__list {
-			@include item-position(30%, 23%);
-		}
-
-		&__button {
-			@include item-position(60%, 23%);
-		}
-	}
 	.sesann-card {
 
 		&__title {
@@ -243,7 +215,7 @@
 	}
 
 	.studio-section {
-		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 2fr;
 		grid-row-gap: 65px;
 		grid-column-gap: 15px;
 		grid-template-columns: minmax(80px, 1fr) 2fr 2fr;
@@ -357,6 +329,7 @@
 	// --- nav menu ---
 
 	.nav-menu {
+		z-index: 1;
 
 		&__item-1 {
 			@include menu-items(0, -100%);
