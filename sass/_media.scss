@@ -272,6 +272,57 @@
 	.patricia-card {
 		padding: 0 20px;
 	}
+
+	.news-section {
+		justify-items: center;
+		align-items: center;
+		justify-content: center;
+		grid-row-gap: 40px;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: minmax(150px, 400px);
+		grid-template-areas: 'title'
+							 'first-news'
+							 'last-news';
+	}
+
+	.news-card {
+		width: 100%;
+		height: 100%;
+		grid-area: title;
+		grid-row: 1;
+	}
+
+	.news-block{
+		padding: 0 40px;
+		position: static;
+
+		&__title {
+			position: static;
+		}
+		&__date {
+			position: static;
+		}
+		&__image {
+			position: static;
+		}
+		&__text {
+			position: static;
+		}
+		&__link {
+			position: static;
+			
+		}
+}
+
+	.first-news {
+		grid-area: first-news;
+		grid-row: 2;
+	}
+
+	.last-news {
+		grid-area: last-news;
+		grid-row: 3;
+	}
 }
 
 @media screen and(max-width: 730px) {
@@ -302,7 +353,53 @@
 			left: 42%;
 		}
 	}
+	
+	// --- nav menu ---
 
+	.nav-menu {
+
+		&__item-1 {
+			@include menu-items(0, -100%);
+		}
+
+		&:hover &__item-1 {
+			transform: translateX(0);
+		}
+
+		&__item-2 {
+			@include menu-items(100%, 0);
+		}
+
+		&:hover &__item-2 {
+			transform: translateX(0);
+		}
+
+		&__item-3 {
+			@include menu-items(100%, -100%);
+		}
+
+		&:hover &__item-3 {
+			transform: translateY(0); //step 13
+		}
+
+		&__item-4 {
+			@include menu-items(200%, 0);
+		}
+
+		&:hover &__item-4 {
+			transform: translateY(0); //step 13
+		}
+
+		&__item-5 {
+			@include menu-items(200%, -100%);
+		}
+
+		&:hover &__item-5 {
+			transform: translateY(0); //step 13
+		}
+	}
+
+	// --- nav menu end ---
 }
 
 @media screen and(max-width: 550px) {
@@ -380,52 +477,4 @@
 		padding: 0 20px;
 	}
 
-	.news-section {
-		justify-items: center;
-		grid-row-gap: 40px;
-		grid-template-rows: 1fr 1fr 1fr;
-		grid-template-columns: minmax(150px, 1fr);
-		grid-template-areas: 'title'
-							 'first-news'
-							 'last-news';
-	}
-
-	.news-card {
-		width: 100%;
-		height: 100%;
-		grid-area: title;
-		grid-row: 1;
-	}
-
-	.news-block{
-		padding: 0 40px;
-		position: static;
-
-		&__title {
-			position: static;
-		}
-		&__date {
-			position: static;
-		}
-		&__image {
-			position: static;
-		}
-		&__text {
-			position: static;
-		}
-		&__link {
-			position: static;
-			
-		}
-}
-
-	.first-news {
-		grid-area: first-news;
-		grid-row: 2;
-	}
-
-	.last-news {
-		grid-area: last-news;
-		grid-row: 3;
-	}
 }
